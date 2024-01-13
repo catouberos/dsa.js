@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { solve } from "../../src/week10/problem1";
+import { prim } from "../../src/week10/problem1";
 
 test("shortest path", () => {
     const distances = [
@@ -9,5 +9,5 @@ test("shortest path", () => {
         [0, 5, 9, 0],
     ];
 
-    expect(solve(distances, 0, 3)).toEqual([0, 1, 3]);
+    expect(prim(distances, 0, 3)).toEqual(8);
 });
