@@ -1,4 +1,4 @@
-export function prim(nodes: number[][], src: number, dest: number): number {
+export function dijkstra(nodes: number[][], src: number, dest: number): number {
     const n = nodes.length;
 
     const distances: number[] = new Array(n).fill(Number.POSITIVE_INFINITY);

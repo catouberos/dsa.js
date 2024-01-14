@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { prim } from "../../src/week10/problem1";
+import { dijkstra } from "../../src/week10/problem1";
 
 test("shortest path", () => {
     const distances = [
@@ -9,5 +9,5 @@ test("shortest path", () => {
         [0, 5, 9, 0],
     ];
 
-    expect(prim(distances, 0, 3)).toEqual(8);
+    expect(dijkstra(distances, 0, 3)).toEqual(8);
 });
