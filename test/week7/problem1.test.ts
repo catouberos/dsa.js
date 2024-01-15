@@ -4,8 +4,8 @@ import { merge, mergeSort, quickSort } from "../../src/week7/problem1";
 let randomNumbers: number[];
 
 beforeEach(() => {
-    randomNumbers = Array.from({ length: 10 }, () =>
-        Math.floor(Math.random() * 10),
+    randomNumbers = Array.from({ length: 1_000_000 }, () =>
+        Math.floor(Math.random() * 1_000_000),
     );
 });
 
