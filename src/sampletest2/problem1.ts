@@ -1,27 +1,12 @@
 export class SecretSearch {
-    xa: number;
-    ya: number;
-    va: number;
-
-    xb: number;
-    yb: number;
-    vb: number;
-
     constructor(
-        xa: number,
-        ya: number,
-        va: number,
-        xb: number,
-        yb: number,
-        vb: number,
-    ) {
-        this.xa = xa;
-        this.ya = ya;
-        this.va = va;
-        this.xb = xb;
-        this.yb = yb;
-        this.vb = vb;
-    }
+        private xa: number,
+        private ya: number,
+        private va: number,
+        private xb: number,
+        private yb: number,
+        private vb: number,
+    ) {}
 
     /**
      * return the minimum time agent A can reach line L
