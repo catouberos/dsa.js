@@ -1,4 +1,4 @@
-function qs(arr: number[], lo: number, hi: number): number[] {
+function qs<T>(arr: T[], lo: number, hi: number): T[] {
     if (lo >= hi) {
         return arr;
     }
@@ -12,7 +12,7 @@ function qs(arr: number[], lo: number, hi: number): number[] {
 }
 
 // return the pivot index
-function partition(arr: number[], lo: number, hi: number): number {
+function partition<T>(arr: T[], lo: number, hi: number): number {
     const p = arr[hi];
     let c = lo;
 
@@ -31,12 +31,12 @@ function partition(arr: number[], lo: number, hi: number): number {
     return c;
 }
 
-export function quickSort(arr: number[]) {
+export function quickSort<T>(arr: T[]) {
     return qs(arr, 0, arr.length - 1);
 }
 
-export function merge(left: number[], right: number[]): number[] {
-    const res: number[] = [];
+export function merge<T>(left: T[], right: T[]): T[] {
+    const res: T[] = [];
 
     while (left.length && right.length) {
         if (left[0] <= right[0]) {
@@ -51,7 +51,7 @@ export function merge(left: number[], right: number[]): number[] {
     return [...res, ...left, ...right];
 }
 
-function ms(arr: number[]): number[] {
+function ms<T>(arr: T[]): T[] {
     const n = arr.length;
 
     if (n <= 1) {
@@ -64,6 +64,6 @@ function ms(arr: number[]): number[] {
     return merge(left, right);
 }
 
-export function mergeSort(arr: number[]) {
+export function mergeSort<T>(arr: T[]) {
     return ms(arr);
 }
